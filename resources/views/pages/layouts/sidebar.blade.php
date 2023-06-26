@@ -36,7 +36,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="dashboard" class="nav-link active">
+            <a href="dashboard" class="@if(request()->is('dashboard'))nav-link active @endif nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -45,7 +45,7 @@
           </li>
           <li class="nav-item">
             <div>
-              <a href="users" class="nav-link">
+              <a href="users" class="@if(request()->is('users'))nav-link active @endif nav-link">
                 <i class="nav-icon fas fa-solid fa-user"></i>
                 <p>
                   User Management
