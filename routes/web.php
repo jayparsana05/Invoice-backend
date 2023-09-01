@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientCntroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
@@ -27,10 +28,20 @@ Route::get('/login', [LoginController::class, 'index'])->middleware('LoggedIn');
 
 Route::get('/create_user', [UserController::class, 'create']);
 
-Route::post('/store', [UserController::class, 'store'])->name('store');
+Route::post('/store', [UserController::class, 'store'])->name('store_user');
 
 Route::get('/users', [UserController::class, 'show']);
 
 Route::get('/edit/{id}', [UserController::class, 'edit']);
 
 Route::post('/update/{id}', [UserController::class, 'update'])->name('update');
+
+Route::get('/create_client', [ClientCntroller::class, 'create']);
+
+Route::post('/store_client', [ClientCntroller::class, 'store'])->name('store_client');
+
+Route::get('/clients', [ClientCntroller::class, 'show']);
+
+Route::get('/edit_client/{id}', [ClientCntroller::class, 'edit']);
+
+Route::post('/update_client/{id}', [ClientCntroller::class, 'update'])->name('update_client');

@@ -19,38 +19,37 @@
             <!-- general form elements -->
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Create User</h3>
+                    <h3 class="card-title">Create Client</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form action= "{{ route('store_user') }}" method="post">
+                <form action= "{{ route('store_client') }}" method="post">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
                             <label for="user_name">Full Name</label>
-                            <input type="text" class="form-control" name="name" id="user_name" placeholder="Enter Name">
+                            <input type="text" class="form-control" name="name" id="client_name" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_location">Company Name</label>
+                            <input type="text" class="form-control" name="company_name" id="company_name" placeholder="Enter location">
                         </div>
                         <div class="form-group">
                             <label for="user_email">Email address</label>
-                            <input type="email" class="form-control" name="email" id="user_email" placeholder="Enter email">
+                            <input type="email" class="form-control" name="email" id="client_email" placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label for="user_mobile_no">Mobile No.</label>
-                            <input type="tel" class="form-control" name="mobile_no" id="user_mobile_no" placeholder="Enter Mobile No.">
+                            <input type="tel" class="form-control" name="mobile_no" id="client_mobile_no" placeholder="Enter Mobile No.">
                         </div>
                         <div class="form-group">
                             <label for="user_password">Password</label>
-                            <input type="password" class="form-control" name="password" id="user_password" placeholder="Password">
+                            <input type="password" class="form-control" name="password" id="client_password" placeholder="Password">
                         </div>
                         <div class="form-group">
-                            <label for="user_location">Location</label>
-                            <input type="text" class="form-control" name="location" id="user_location" placeholder="Enter location">
+                            <label for="user_location">Address</label>
+                            <input type="text" class="form-control" name="address" id="client_address" placeholder="Enter location">
                         </div>
-                        <div class="form-group">
-                            <label for="user_vat_no">VAT No.</label>
-                            <input type="text" class="form-control" name="vat_no" id="user_vat_no" placeholder="Enter VAT No.">
-                        </div>
-
                     </div>
                     <!-- /.card-body -->
 
